@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\rc;
+use App\Registro;
 use Illuminate\Http\Request;
 
-class DatosController extends Controller
+class RegistroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class DatosController extends Controller
      */
     public function index()
     {
-        $respuestas = Datos::all();
-        return view('programas.programaIndex', compact('respuestas'));
+        $usuarios = Registro::all();
+        return view('programas.index', compact('usuarios'));
     }
 
     /**
@@ -25,7 +26,7 @@ class DatosController extends Controller
      */
     public function create()
     {
-        return view('programas.programaForm');
+        return view('programas.form');
     }
 
     /**
@@ -36,8 +37,8 @@ class DatosController extends Controller
      */
     public function store(Request $request)
     {
-        ProgramaEducativo::create($request->all());
-        return redirect()->route('respuesta.index');
+        Registro::create($request->all());
+        return redirect()->route('registro.index');
     }
 
     /**
@@ -46,7 +47,7 @@ class DatosController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function show(Datos $Datos)
+    public function show(Registro $Registro)
     {
         //
     }
@@ -57,7 +58,7 @@ class DatosController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function edit(Datos $Datos)
+    public function edit(Registro $Registro)
     {
         //
     }
@@ -69,7 +70,7 @@ class DatosController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Datos $Datos)
+    public function update(Request $request, Registro $Registro)
     {
         //
     }
@@ -80,7 +81,7 @@ class DatosController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Datos $Datos)
+    public function destroy(Registro $Registro)
     {
         //
     }

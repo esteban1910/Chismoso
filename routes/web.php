@@ -11,16 +11,48 @@
 |
 */
 
+/*
 Route::get('/', function () {
-    return view('welcome');
+    return view('programas.form');
+
 });
+*/
 /*
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 */
+/*
+Route::resource('direccionar', 'DatosController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+*/
 
-Route::resource('Respuesta', 'CatosController');
+
+
+
+
+
+//Route::get('/', 'HomeController@index')->name('home');
+/*
+Route::get('/', function () {
+    return view('programas.form');
+});
+*/
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('registro', 'RegistroController');
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
