@@ -59,12 +59,10 @@ Route::resource('registro', 'RegistroController');
 
 Auth::routes();
 
-Route::view('/', 'programas.form');
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/principal','layouts.principal');
 
-Route::view('/inicio', 'programas.inicio');
+Route::view('/', 'programas.inicio');
 
 //s Route::view('/prin','programas.form');
