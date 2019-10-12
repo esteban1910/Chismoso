@@ -47,6 +47,8 @@ Route::get('/', function () {
 });
 */
 
+use Illuminate\Support\Facades\Route;
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -55,4 +57,8 @@ Route::resource('registro', 'RegistroController');
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::view('/', 'programas.form');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('/principal','layouts.principal');

@@ -47,9 +47,10 @@ class RegistroController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function show(Registro $Registro)
+    public function show(Registro $registro)
     {
         //
+        return view('programas.programaShow',compact('registro'));
     }
 
     /**
@@ -58,9 +59,10 @@ class RegistroController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function edit(Registro $Registro)
+    public function edit(Registro $registro)
     {
         //
+        return view('programas.form', compact('registro'));
     }
 
     /**
@@ -70,9 +72,25 @@ class RegistroController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Registro $Registro)
+    public function update(Request $request, Registro $registro)
     {
         //
+        /*
+        $programa->programa = $request->programa;
+        $programa->clave = $request->clave;
+        $programa->save();
+        return redirect()->route('programa.show', $programa->id);
+        */
+        $registro->pregunta1= $request->pregunta1;
+        $registro->pregunta2= $request->pregunta2;
+        $registro->pregunta3= $request->pregunta3;
+        $registro->pregunta4= $request->pregunta4;
+        $registro->pregunta5= $request->pregunta5;
+
+        $registro->save();
+
+        return redirect()->route('registro.show',$registro->id);
+
     }
 
     /**
@@ -81,8 +99,9 @@ class RegistroController extends Controller
      * @param  \App\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Registro $Registro)
+    public function destroy(Registro $registro)
     {
-        //
+        $registro->delete();
+        return redirect()->route('registro.index');
     }
 }
