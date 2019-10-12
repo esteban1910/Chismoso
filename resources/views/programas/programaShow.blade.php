@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
-@section('content')
+@section('contenido')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -11,7 +11,7 @@
                   <a href="{{ route('registro.index') }}" class="btn btn-default btn-sm">Listado de Programas</a>
                     <table class="table">
                       <thead>
-                        <tr><th>ID</th> <th>Respuesta 1</th> <th>Respuesta 2</th> <th>Respuesta 3</th> <th>Respuesta 4</th> <th>Respuesta 5</th> <th>Acciones</th></tr>
+                     <tr><th>ID</th> <th>Respuesta 1</th> <th>Respuesta 2</th> <th>Respuesta 3</th> <th>Respuesta 4</th> <th>Respuesta 5</th> <th>Acciones</th></tr>
                       </thead>
                       <tbody>
                           <tr>
