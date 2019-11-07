@@ -67,4 +67,6 @@ Route::view('/', 'programas.inicio');
 
 Route::resource('centro', 'CentroUniversitarioController');
 
+Route::resource('cliente', 'ClienteController');
+
 //s Route::view('/prin','programas.form');
