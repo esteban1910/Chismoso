@@ -59,11 +59,11 @@ Route::resource('registro', 'RegistroController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/principal','layouts.principal');
 
-Route::view('/', 'programas.inicio');
+Route::view('/home', 'programas.inicio');
 
 Route::resource('centro', 'CentroUniversitarioController');
 

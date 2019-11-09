@@ -1,8 +1,9 @@
-@extends('layouts.principal')
+{{--@extends('layouts.principal')--}}
+@extends('layouts.app')
 
-@section('contenido')
-<main class="py-5">
-<div class="py-5">
+@section('content')
+{{--<main class="py-5">
+<div class="py-5">--}}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,7 +11,7 @@
                 <div class="card-header">Información del Programa</div>
 
                 <div class="card-body">
-                  <a href="{{ route('registro.index') }}" class="btn btn-default btn-sm">Listado de Programas</a>
+                  <a href="{{ route('registro.index') }}" class="btn btn-default btn-sm">Listado de respuestas</a>
                     <table class="table">
                       <thead>
                      <tr><th>ID</th> <th>Respuesta 1</th> <th>Respuesta 2</th> <th>Respuesta 3</th> <th>Respuesta 4</th> <th>Respuesta 5</th> <th>Acciones</th></tr>

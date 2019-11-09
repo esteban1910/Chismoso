@@ -61,7 +61,6 @@ class RegistroController extends Controller
      */
     public function edit(Registro $registro)
     {
-        //
         return view('programas.form', compact('registro'));
     }
 

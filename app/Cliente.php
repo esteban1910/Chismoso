@@ -8,8 +8,14 @@ class Cliente extends Model
 {
     protected $fillable = ['nombre', 'correo', 'codigo', 'fecha_nacimiento'];
     protected $dates = ['fecha_nacimiento', 'created_at', 'updated_at'];
+    
     public function centroUniversitario()
     {
         return $this->belongsTo(CentroUniversitario::class, 'centro_universitario_id');
+    }
+
+    public function proyectos()
+    {
+        return $this->belongsToMany(Proyecto::class);
     }
 }

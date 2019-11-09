@@ -1,13 +1,14 @@
-@extends('layouts.principal')
+{{--@extends('layouts.principal')--}}
+@extends('layouts.app')
 
-@section('contenido')
-<main class="py-5">
-<div class="py-5">
+@section('content')
+{{--<main class="py-5">
+<div class="py-5">--}}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Programas Educativos</div>
+                <div class="card-header">Todas las respuestas</div>
 
                 <div class="card-body">
                   <a href="{{ route('registro.create') }}" class="btn btn-success btn-sm">Contestar De nuevo</a>
