@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-          <a class="nav-link" href="#">Rgistrarse</a>
+          <a class="nav-link" href="{{route('cliente.create')}}">Rgistrarse</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Loguearse</a>

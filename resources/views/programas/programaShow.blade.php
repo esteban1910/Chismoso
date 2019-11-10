@@ -1,9 +1,8 @@
-{{--@extends('layouts.principal')--}}
-@extends('layouts.app')
+@extends('layouts.principal')
 
-@section('content')
-{{--<main class="py-5">
-<div class="py-5">--}}
+@section('contenido')
+<main class="py-5">
+<div class="py-5">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

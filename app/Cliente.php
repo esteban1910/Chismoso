@@ -14,8 +14,8 @@ class Cliente extends Model
         return $this->belongsTo(CentroUniversitario::class, 'centro_universitario_id');
     }
 
-    public function proyectos()
+    public function grupos()
     {
-        return $this->belongsToMany(Proyecto::class);
+        return $this->belongsToMany(Grupo::class);
     }
 }
